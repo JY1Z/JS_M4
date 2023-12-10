@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment5</title>
+</head>
+<body>
+    <h1>Assignment 5</h1>
+
+    <script>
+        // Function to fetch and display Chuck Norris joke
+        function fetchChuckNorrisJoke() {
+            fetch('https://api.chucknorris.io/jokes/random')
+                .then(response => response.json())
+                .then(data => {
+                    const joke = data.value;
+                    console.log(joke);
+                })
+                .catch(error => console.error("Error fetching Chuck Norris joke:", error));
+        }
+
+        // Fetch and display Chuck Norris joke when the page loads
+        fetchChuckNorrisJoke();
+    </script>
+</body>
+</html>
